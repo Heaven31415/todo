@@ -1,0 +1,186 @@
+/* Samsung Galaxy S8 plus */
+
+:root {
+  --main-black-color: #333;
+  --main-white-color: #eee;
+  --placeholder-color: #999;
+  --shadow-color: rgba(30, 30, 30, 0.5);
+  --contrast-color: rgb(64, 190, 64);
+  --high-contrast-color: rgb(52, 156, 52);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+}
+
+::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+body {
+  margin: 0;
+  color: var(--main-black-color);
+  background-image: url("assets/background.png");
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 10px;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0;
+  padding: 10px;
+}
+
+#add-new-todo {
+  background-color: var(--main-white-color);
+  width: 700px;
+  border: 1px solid var(--main-black-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 30px auto;
+  box-shadow: 2px 2px 4px 2px var(--shadow-color);
+}
+
+#add-new-todo input[type=text] {
+  width: 70%;
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--main-black-color);
+  border-radius: 4px;
+  color: var(--main-black-color);
+  font-family: 'Muli', sans-serif;
+  transition: background-color 0.5s;
+}
+
+#add-new-todo input[type=text]:focus {
+  outline: none;
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+}
+
+#add-new-todo textarea {
+  width: 70%;
+  height: 200px;
+  resize: none;
+  font-size: 1em;
+  padding: 8px;
+  border: 1px solid var(--main-black-color);
+  border-radius: 4px;
+  color: var(--main-black-color);
+  font-family: 'Muli', sans-serif;
+  transition: background-color 0.5s;
+}
+
+#add-new-todo textarea:focus {
+  outline: none;
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+}
+
+#add-new-todo button {
+  font-size: 1.2em;
+  width: 40%;
+  margin: 5px;
+  padding: 5px;
+  color: var(--main-white-color);
+  background-color: var(--contrast-color);
+  border: 1px solid var(--main-black-color);
+  border-radius: 4px;
+  font-family: 'Muli', sans-serif;
+  transition: background-color 0.5s;
+}
+
+#add-new-todo button:hover {
+  cursor: pointer;
+  background-color: var(--high-contrast-color);
+}
+
+#add-new-todo button:focus {
+  outline: none;
+  background-color: var(--high-contrast-color);
+}
+
+.todos {
+  margin: 30px auto;
+  width: 700px;
+  background-color: var(--main-white-color);
+  border: 1px solid var(--main-black-color);
+  box-shadow: 2px 2px 4px 2px var(--shadow-color);
+}
+
+.todos > h2 {
+  margin-top: 15px;
+}
+
+.todo {
+  margin: 20px;
+  background-color: white;
+}
+
+.todo > h3 {
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+.todo > p {
+  font-size: 1.2em;
+  margin: 20px auto;
+  width: 90%;
+  text-align: justify;
+}
+
+.todo > button {
+  font-size: 1.2em;
+  width: 20%;
+  margin: 5px 5px 15px;
+  padding: 5px;
+  color: var(--main-white-color);
+  border: 1px solid var(--main-black-color);
+  border-radius: 4px;
+  font-family: 'Muli', sans-serif;
+  transition: background-color 0.5s;
+}
+
+.todo > button:hover {
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: rgb(49, 49, 177);
+}
+
+.edit-button:hover {
+  background-color: rgb(36, 36, 131);
+}
+
+.delete-button {
+  background-color: rgb(209, 45, 45);
+}
+
+.delete-button:hover {
+  background-color: rgb(177, 39, 39);
+}
+
+footer {
+  font-size: 1.25em;
+  margin: 20px;
+}
+
+footer > span {
+  padding: 5px;
+  border-bottom: 1px solid var(--main-black-color);
+}
