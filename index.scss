@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-$font-family: 'Muli', sans-serif;
+$font-family: "Muli", sans-serif;
 
 $black: #333;
 $white: #eee;
@@ -12,7 +12,7 @@ $light-red: rgb(209, 45, 45);
 $dark-red: rgb(177, 39, 39);
 $light-green: rgb(64, 190, 64);
 $dark-green: rgb(52, 156, 52);
-$light-blue:rgb(49, 49, 177);
+$light-blue: rgb(49, 49, 177);
 $dark-blue: rgb(36, 36, 131);
 
 $placeholder-color: #999;
@@ -57,7 +57,7 @@ h2 {
   margin: 30px auto;
   box-shadow: 2px 2px 4px 2px $shadow-color;
 
-  input[type=text] {
+  input[type="text"] {
     display: block;
     width: 70%;
     font-size: 1em;
@@ -66,11 +66,11 @@ h2 {
     border: 1px solid $black;
     border-radius: 4px;
     color: $black;
-    font-family: 'Muli', sans-serif;
+    font-family: $font-family;
     transition: background-color 0.5s;
   }
 
-  input[type=text]:focus {
+  input[type="text"]:focus {
     outline: none;
     background-color: $black;
     color: $white;
@@ -87,7 +87,7 @@ h2 {
     border: 1px solid $black;
     border-radius: 4px;
     color: $black;
-    font-family: 'Muli', sans-serif;
+    font-family: $font-family;
     transition: background-color 0.5s;
   }
 
@@ -106,7 +106,7 @@ h2 {
     background-color: $light-green;
     border: 1px solid $black;
     border-radius: 4px;
-    font-family: 'Muli', sans-serif;
+    font-family: $font-family;
     transition: background-color 0.5s;
   }
 
@@ -114,7 +114,7 @@ h2 {
     cursor: pointer;
     background-color: $dark-green;
   }
-  
+
   button:focus {
     outline: none;
     background-color: $dark-green;
@@ -142,14 +142,14 @@ h2 {
     letter-spacing: 1px;
     padding-top: 20px;
   }
-  
+
   p {
     font-size: 1.2em;
     margin: 20px auto;
     width: 90%;
     text-align: justify;
   }
-  
+
   button {
     font-size: 1.2em;
     width: 20%;
@@ -158,10 +158,10 @@ h2 {
     color: $white;
     border: 1px solid $black;
     border-radius: 4px;
-    font-family: 'Muli', sans-serif;
+    font-family: $font-family;
     transition: background-color 0.5s;
   }
-  
+
   button:hover {
     cursor: pointer;
   }
