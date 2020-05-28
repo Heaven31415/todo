@@ -27,6 +27,16 @@ $shadow-color: rgba(30, 30, 30, 0.5);
   color: $placeholder-color;
 }
 
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   margin: 0;
   color: $black;
@@ -48,42 +58,53 @@ h2 {
   padding: 10px;
 }
 
+.row {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  box-shadow: 2px 2px 4px 2px $shadow-color;
   background-color: $white;
-  width: 700px;
   border: 1px solid $black;
   border-radius: 4px;
   padding: 10px;
   margin: 30px auto;
-  box-shadow: 2px 2px 4px 2px $shadow-color;
 
-  input[type="text"] {
-    display: block;
+  input[type="text"], input[type="number"] {
     width: 70%;
-    font-size: 1em;
     padding: 10px;
-    margin: 10px auto;
+    margin: 10px 5px;
     border: 1px solid $black;
     border-radius: 4px;
     color: $black;
     font-family: $font-family;
+    font-size: 1em;
     transition: background-color 0.5s;
   }
 
-  input[type="text"]:focus {
+  input[type="text"]:focus, input[type="number"]:focus {
     outline: none;
     background-color: $black;
     color: $white;
   }
 
+  input[type="number"] {
+    width: 25%;
+  }
+
   textarea {
-    display: block;
     width: 70%;
     height: 200px;
     resize: none;
     font-size: 1em;
     padding: 8px;
-    margin: 10px auto;
+    margin: 10px 0;
     border: 1px solid $black;
     border-radius: 4px;
     color: $black;
@@ -122,7 +143,11 @@ h2 {
 }
 
 .todosContainer {
-  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 30px 0;
   width: 700px;
   background-color: $white;
   border: 1px solid $black;
@@ -135,6 +160,10 @@ h2 {
   p {
     font-size: 1.2em;
   }
+}
+
+#todos {
+  width: 100%;
 }
 
 .todo {
