@@ -6,8 +6,6 @@ $light-red: rgb(231, 54, 54);
 $dark-red: rgb(185, 40, 40);
 $light-green: rgb(64, 190, 64);
 $dark-green: rgb(52, 156, 52);
-$light-blue: rgb(58, 58, 211);
-$dark-blue: rgb(46, 46, 155);
 
 $placeholder-color: #999;
 $shadow-color: rgba(30, 30, 30, 0.5);
@@ -195,19 +193,6 @@ h2 {
 
   button:hover {
     cursor: pointer;
-  }
-}
-
-.edit-button {
-  background-color: $light-blue;
-
-  &:hover {
-    background-color: $dark-blue;
-  }
-
-  &:focus {
-    border: 1px dotted $black;
-    outline: none;
   }
 }
 
