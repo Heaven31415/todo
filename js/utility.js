@@ -1,5 +1,9 @@
 'use strict'
 
+const setTopbarContent = () => {
+  topbar.textContent = moment().format('D MMMM YYYY hh:mm:ss')
+}
+
 const setPlaceholderContent = () => {
   placeholder.style.display = todosContainer.childElementCount === 0 ? 'block' : 'none'
 }

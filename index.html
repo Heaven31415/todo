@@ -16,12 +16,13 @@
 </head>
 <body>
   <div class="flex-column">
+    <h1 id="topbar" class="sticky-topbar"></h1>
     <header>
-      <h1>All your things to do are belong to us</h1>
+      <h2>All your things to do are belong to us!</h2>
     </header>
     <main>
       <form id="todo-form" class="form" autocomplete="off">
-        <h2>Add a new thing to do:</h2>
+        <h3>Add a new thing to do:</h3>
         <input type="text" name="title" placeholder="Short description of your thing to do.">
         <textarea name="content" placeholder="Describe every little detail of your future task."></textarea>
         <label><input id="deadline-checkbox" type="checkbox" name="withDeadline"> with deadline</label>
@@ -33,7 +34,7 @@
         <button>Add</button>
       </form>
       <div class="todos-wrapper">
-        <h2>What do I need to do?</h2>
+        <h3>What do You need to do?</h3>
         <p id="placeholder">You don't have to do anything!</p>
         <div id="todos-container"></div>
       </div>

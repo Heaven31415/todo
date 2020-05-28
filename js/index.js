@@ -2,6 +2,7 @@
 
 const todoForm = document.getElementById('todo-form')
 const todosContainer = document.getElementById('todos-container')
+const topbar = document.getElementById('topbar')
 const placeholder = document.getElementById('placeholder')
 const todos = new TodosStorage()
 
@@ -23,6 +24,8 @@ window.addEventListener('load', () => {
     todosContainer.appendChild(createTodoDOM(todo))
     setPlaceholderContent()
   })
+
+  setInterval(setTopbarContent, 1000)
 })
 
 todoForm.addEventListener('submit', e => {
