@@ -19,14 +19,6 @@ const createTodoDOM = (title, body) => {
   p.textContent = body
   div.appendChild(p)
 
-  const editButton = document.createElement('button')
-  editButton.textContent = 'Edit'
-  editButton.classList.add('edit-button')
-  editButton.onclick = () => {
-    // TODO: Work on me!
-  }
-  div.appendChild(editButton)
-
   const removeButton = document.createElement('button')
   removeButton.textContent = 'Delete'
   removeButton.classList.add('delete-button')
