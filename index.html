@@ -20,12 +20,12 @@
       <form id="todo-form" class="form" autocomplete="off">
         <h2>Add a new thing to do:</h2>
         <input type="text" name="title" placeholder="Short description of your thing to do.">
-        <textarea name="body" placeholder="Describe every little detail of your future task."></textarea>
-        <label><input type="checkbox" name="withDeadline"> with deadline</label>
+        <textarea name="content" placeholder="Describe every little detail of your future task."></textarea>
+        <label><input id="deadline-checkbox" type="checkbox" name="withDeadline"> with deadline</label>
         <div class="flex-row">
-          <input type="number" name="day" min="1" max="31" placeholder="Day">
-          <input type="number" name="month" min="1" max="12" placeholder="Month">
-          <input type="number" name="year" min="2020" max="2120" placeholder="Year">
+          <input id="day-input" type="number" name="day" placeholder="Day" disabled>
+          <input id="month-input" type="number" name="month" placeholder="Month" disabled>
+          <input id="year-input" type="number" name="year" placeholder="Year" disabled>
         </div>
         <button>Add</button>
       </form>
@@ -35,10 +35,12 @@
         <div id="todos-container"></div>
       </div>
     </main>
-    <footer>
-      2020 © All Rights Reserved - May we meet again!
-    </footer>
+    <footer>2020 © All Rights Reserved - May we meet again!</footer>
   </div>
-  <script src="index.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script src="js/todos-storage.js"></script>
+  <script src="js/utility.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
