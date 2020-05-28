@@ -1,12 +1,10 @@
-const addNewTodoForm = document.querySelector('#add-new-todo')
-const placeholder = document.querySelector('#placeholder')
-const todos = document.querySelector('#todos')
-let todosData = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : []
-
-// Build every todo div after loading todos
+const todoForm = document.getElementById('todo-form')
+const placeholder = document.getElementById('placeholder')
+const todosContainer = document.getElementById('todos-container')
+let todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : []
 
 const setPlaceholderStatus = () => {
-  placeholder.style.display = todos.childElementCount === 0 ? 'block' : 'none'
+  placeholder.style.display = todosContainer.childElementCount === 0 ? 'block' : 'none'
  }
 
 const createTodoDOM = (title, body) => {
@@ -36,15 +34,15 @@ const createTodoDOM = (title, body) => {
     div.remove()
     setPlaceholderStatus()
 
-    todosData = todosData.filter(todo => todo.title !== title && todo.body !== body)
-    localStorage.setItem('todos', JSON.stringify(todosData))
+    todos = todos.filter(todo => todo.title !== title && todo.body !== body)
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
   div.appendChild(removeButton)
 
   return div
 }
 
-addNewTodoForm.onsubmit = function(e) {
+todoForm.onsubmit = function(e) {
   e.preventDefault()
 
   const title = e.target.elements[0].value
@@ -55,13 +53,13 @@ addNewTodoForm.onsubmit = function(e) {
     e.target.elements[1].value = ''
   
     const todo = createTodoDOM(title, body)
-    todos.appendChild(todo)
+    todosContainer.appendChild(todo)
     setPlaceholderStatus()
 
-    todosData.push({
+    todos.push({
       title: title,
       body: body
     })
-    localStorage.setItem('todos', JSON.stringify(todosData))
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 }

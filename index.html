@@ -12,27 +12,27 @@
   <link href="index.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="flex-column">
     <header>
       <h1>All your things to do are belong to us</h1>
     </header>
     <main>
-      <form id="add-new-todo" class="form" autocomplete="off">
+      <form id="todo-form" class="form" autocomplete="off">
         <h2>Add a new thing to do:</h2>
         <input type="text" name="title" placeholder="Short description of your thing to do.">
         <textarea name="body" placeholder="Describe every little detail of your future task."></textarea>
         <label><input type="checkbox" name="withDeadline"> with deadline</label>
-        <div class="row">
+        <div class="flex-row">
           <input type="number" name="day" min="1" max="31" placeholder="Day">
           <input type="number" name="month" min="1" max="12" placeholder="Month">
           <input type="number" name="year" min="2020" max="2120" placeholder="Year">
         </div>
         <button>Add</button>
       </form>
-      <div class="todosContainer">
+      <div class="todos-wrapper">
         <h2>What do I need to do?</h2>
         <p id="placeholder">You don't have to do anything!</p>
-        <div id="todos"></div>
+        <div id="todos-container"></div>
       </div>
     </main>
     <footer>
