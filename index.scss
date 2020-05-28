@@ -104,7 +104,7 @@ h3 {
     color: $black;
     font-family: $font-family;
     font-size: 1em;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease-in;
   }
 
   input[type="text"]:focus, input[type="number"]:focus {
@@ -128,7 +128,7 @@ h3 {
     border-radius: 4px;
     color: $black;
     font-family: $font-family;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease-in;
   }
 
   textarea:focus {
@@ -147,7 +147,7 @@ h3 {
     border: 1px solid $black;
     border-radius: 4px;
     font-family: $font-family;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease-in;
   }
 
   button:hover {
@@ -202,7 +202,7 @@ h3 {
     border: 1px solid $black;
     border-radius: 4px;
     font-family: $font-family;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease-in;
   }
 
   button:hover {
