@@ -1,7 +1,7 @@
 'use strict'
 
 const setTopbarContent = () => {
-  topbar.textContent = moment().format('D MMMM YYYY hh:mm:ss')
+  topbar.textContent = moment().format('D MMMM YYYY HH:mm:ss')
 }
 
 const setPlaceholderContent = () => {
