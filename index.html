@@ -25,7 +25,11 @@
         <h3>Add a new thing to do:</h3>
         <input type="text" name="title" placeholder="Short description of your thing to do.">
         <textarea name="content" placeholder="Describe every little detail of your future task."></textarea>
-        <label><input id="deadline-checkbox" type="checkbox" name="withDeadline"> with deadline</label>
+        <label class="checkbox-container">
+          Deadline
+          <input id="deadline-checkbox" type="checkbox" name="withDeadline">
+          <span class="checkmark"></span>
+        </label>
         <div class="flex-row">
           <input id="day-input" type="number" name="day" placeholder="Day" disabled>
           <input id="month-input" type="number" name="month" placeholder="Month" disabled>
