@@ -1,7 +1,10 @@
 'use strict'
 
-const setTopbarContent = () => {
-  topbar.textContent = moment().format('D MMMM YYYY HH:mm:ss')
+const datetime = document.getElementById('datetime')
+const placeholder = document.getElementById('placeholder')
+
+const setDatetimeContent = () => {
+  datetime.textContent = moment().format('D MMMM YYYY HH:mm:ss')
 }
 
 const setPlaceholderContent = () => {

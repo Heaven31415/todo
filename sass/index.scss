@@ -54,23 +54,28 @@ h3 {
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.3em;
 }
 
 footer {
+  width: 100%;
+  border-top: 1px solid v.$black;
+  background-color: v.$white;
+  color: v.$black;
   flex-shrink: 0;
-  font-size: 1.25em;
-  margin: 20px;
+  font-size: 1.3em;
+  padding: 25px;
+  margin-top: 20px;
 }
 
-.sticky-topbar {
+.sticky-datetime {
   width: 100%;
-  background-image: linear-gradient(v.$placeholder-color, v.$black);
-  border-bottom: 2px solid v.$black;
-  color: v.$white;
+  box-shadow: 0px 2px 4px 2px v.$shadow-color;
+  background-color: v.$white;
+  color: v.$black;
   margin: 0;
   padding: 10px;
   position: sticky;
   top: 0;
-  opacity: 0.85;
+  opacity: 0.95;
 }

@@ -2,8 +2,6 @@
 
 const todoForm = document.getElementById('todo-form')
 const todosContainer = document.getElementById('todos-container')
-const topbar = document.getElementById('topbar')
-const placeholder = document.getElementById('placeholder')
 const todos = new TodosStorage()
 
 const deadlineCheckbox = document.getElementById('deadline-checkbox')
@@ -25,7 +23,7 @@ window.addEventListener('load', () => {
     setPlaceholderContent()
   })
 
-  setInterval(setTopbarContent, 1000)
+  setInterval(setDatetimeContent, 1000)
 })
 
 todoForm.addEventListener('submit', e => {
