@@ -2,11 +2,9 @@
 
 .checkbox-container {
   cursor: pointer;
-  display: block;
   position: relative;
   user-select: none;
   padding-left: 2em;
-  margin: 0.3em;
   font-size: 1em;
 
   input[type="checkbox"] {

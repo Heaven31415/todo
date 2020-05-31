@@ -18,6 +18,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   color: v.$black;
   background-image: url("../assets/background.png"); /* Background pattern from Toptal Subtle Patterns */
@@ -25,9 +29,9 @@ body {
   text-align: center;
 }
 
-header {
+main {
+  flex: 1 0 auto;
   width: 100%;
-  margin-top: 50px;
 }
 
 h1 {
@@ -49,7 +53,12 @@ h3 {
   padding: 10px;
 }
 
+p {
+  font-size: 1.25em;
+}
+
 footer {
+  flex-shrink: 0;
   font-size: 1.25em;
   margin: 20px;
 }
@@ -64,16 +73,4 @@ footer {
   position: sticky;
   top: 0;
   opacity: 0.85;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flex-row {
-  display: flex;
-  width: 80%;
-  justify-content: center;
 }
