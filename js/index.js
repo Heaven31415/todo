@@ -38,12 +38,12 @@ todoForm.addEventListener('submit', e => {
   const year = todoForm.year.value
 
   if (title.length === 0) {
-    alert('Title length must be greater than zero.')
+    showModal('Invalid title value', 'Title length must be greater than zero.')
     return
   }
 
   if (content.length === 0) {
-    alert('Content length must be greater than zero.')
+    showModal('Invalid content value', 'Content length must be greater than zero.')
     return
   }
 
@@ -57,12 +57,12 @@ todoForm.addEventListener('submit', e => {
     const deadline = moment(`${day}/${month}/${year}`, 'DD/MM/YYYY')
 
     if (!deadline.isValid()) {
-      alert('Invalid date format.')
+      showModal('Invalid date format', 'Something is wrong with the format of the date you passed.')
       return
     }
 
     if (!deadline.isAfter()) {
-      alert('Your deadline should be set to tomorrow or later.')
+      showModal('Invalid date value', 'Your deadline should be set to tomorrow or later.')
       return
     }
       

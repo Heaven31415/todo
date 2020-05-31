@@ -3,7 +3,7 @@
 $background-color: rgba(0, 0, 0, 0.5);
 
 .modal-background {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -14,6 +14,8 @@ $background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   overflow: auto;
   background-color: $background-color;
+  animation-name: fade-in;
+  animation-duration: 1s;
 }
 
 .modal-content {
@@ -21,9 +23,8 @@ $background-color: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   align-items: center;
   background-color: v.$white;
+  padding: 10px;
   max-width: 600px;
-  animation-name: fade-in;
-  animation-duration: 1s;
 
   p {
     margin: 15px;
