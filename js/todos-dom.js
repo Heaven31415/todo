@@ -26,7 +26,7 @@ class TodosDOM {
     this.storage.remove(id)
   }
 
-  setPlaceholderDisplay = () => {
+  setPlaceholderDisplay() {
     this.placeholder.style.display = dom.childElementCount === 0 ? 'block' : 'none'
   }
 }
