@@ -10,10 +10,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/animations.css" rel="stylesheet">
-  <link href="css/modal-box.css" rel="stylesheet">
   <link href="css/checkbox.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
-  <link href="css/todo-form.css" rel="stylesheet">
+  <link href="css/modal-box.css" rel="stylesheet">
+  <link href="css/new-todo-form.css" rel="stylesheet">
   <link href="css/todos.css" rel="stylesheet">
 
   <!-- Favicons from https://favicon.io/emoji-favicons/hammer/ created by John Sorrentino -->
@@ -37,7 +37,7 @@
     <h2>All your things to do are belong to us!</h2>
   </header>
   <main>
-    <form id="todo-form" class="todo-form" autocomplete="off">
+    <form id="new-todo-form" class="new-todo-form" autocomplete="off">
       <h3>Add a new thing to do:</h3>
       <input type="text" name="title" placeholder="Short description of your thing to do.">
       <textarea name="content" placeholder="Describe every little detail of your future task."></textarea>
@@ -56,14 +56,18 @@
 
     <h2>What do you need to do?</h2>
     <p id="placeholder">You don't have to do anything!</p>
-    <div id="todos-container" class="todos-container"></div>
+    <div id="todos-dom" class="todos-dom"></div>
   </main>
   <footer>2020 © All Rights Reserved - May we meet again!</footer>
   
-  <script src="js/moment.min.js"></script>
+  <script src="js/lib/moment.min.js"></script>
+  <script src="js/datetime.js"></script>
+  <script src="js/deadline-checkbox.js"></script>
+  <script src="js/todo.js"></script>
   <script src="js/todos-storage.js"></script>
-  <script src="js/utility.js"></script>
+  <script src="js/todos-dom.js"></script>
   <script src="js/modal-box.js"></script>
+  <script src="js/new-todo-form.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>

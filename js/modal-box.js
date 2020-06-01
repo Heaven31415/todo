@@ -1,3 +1,5 @@
+'use strict'
+
 class ModalBox {
   constructor() {
     this.background = document.getElementById('modal-box-background')
