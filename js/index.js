@@ -9,6 +9,8 @@ const dayInput = document.getElementById('day-input')
 const monthInput = document.getElementById('month-input')
 const yearInput = document.getElementById('year-input')
 
+const modalBox = new ModalBox()
+
 deadlineCheckbox.addEventListener('change', e => {
   const disabled = !e.target.checked
 
@@ -38,12 +40,12 @@ todoForm.addEventListener('submit', e => {
   const year = todoForm.year.value
 
   if (title.length === 0) {
-    showModal('Invalid title value', 'Title length must be greater than zero.')
+    modalBox.show('Invalid title value', 'Title length must be greater than zero.')
     return
   }
 
   if (content.length === 0) {
-    showModal('Invalid content value', 'Content length must be greater than zero.')
+    modalBox.show('Invalid content value', 'Content length must be greater than zero.')
     return
   }
 
@@ -57,12 +59,12 @@ todoForm.addEventListener('submit', e => {
     const deadline = moment(`${day}/${month}/${year}`, 'DD/MM/YYYY')
 
     if (!deadline.isValid()) {
-      showModal('Invalid date format', 'Something is wrong with the format of the date you passed.')
+      modalBox.show('Invalid date format', 'Something is wrong with the format of the date you passed.')
       return
     }
 
     if (!deadline.isAfter()) {
-      showModal('Invalid date value', 'Your deadline should be set to tomorrow or later.')
+      modalBox.show('Invalid date value', 'Your deadline should be set to tomorrow or later.')
       return
     }
       

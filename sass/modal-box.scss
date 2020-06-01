@@ -2,7 +2,7 @@
 
 $background-color: rgba(0, 0, 0, 0.5);
 
-.modal-background {
+.modal-box-background {
   display: none;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ $background-color: rgba(0, 0, 0, 0.5);
   animation-duration: 1s;
 }
 
-.modal-content {
+.modal-box-content {
   display: flex;
   flex-direction: column;
   align-items: center;
