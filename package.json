@@ -1,0 +1,32 @@
+{
+  "name": "things-to-do",
+  "version": "1.0.0",
+  "description": "A classic web programming application, list of things to do",
+  "scripts": {
+    "build-partial": "npm run build:scss && npm run build:js",
+    "build:scss": "sass --no-source-map --style=compressed src/styles:dist/styles",
+    "build:js": "babel src/js --out-file dist/lib.js",
+    "watch-partial": "parallelshell \"npm run watch:scss\" \"npm run watch:js\"",
+    "watch:scss": "onchange -v \"src/styles/*.scss\" -- npm run build:scss",
+    "watch:js": "babel --watch src/js --out-file dist/lib.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heaven31415/todo.git"
+  },
+  "author": "heaven31415 <heaven31415@gmail.com>",
+  "license": "Zlib",
+  "bugs": {
+    "url": "https://github.com/Heaven31415/todo/issues"
+  },
+  "homepage": "https://github.com/Heaven31415/todo#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "onchange": "^7.0.2",
+    "parallelshell": "^3.0.1",
+    "sass": "^1.26.7"
+  },
+  "dependencies": {}
+}

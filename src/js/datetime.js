@@ -3,6 +3,7 @@
 class Datetime {
   constructor() {
     this.datetime = document.getElementById('datetime')
+    this.setTextContent()
     setInterval(this.setTextContent, 1000)
   }
 
