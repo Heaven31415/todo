@@ -1,5 +1,9 @@
 'use strict'
 
+const getNumberOfDays = (a, b) => {
+  return Math.max(Math.ceil(moment.duration(a.diff(b)).asDays()), 0)
+}
+
 class Todo {
   constructor(id, title, content, deadline) {
     this.id = id
@@ -9,22 +13,32 @@ class Todo {
   }
 
   generateDOM() {
-    const div = document.createElement('div')
-    div.classList.add('todo')
+    const container = document.createElement('div')
+    container.classList.add('todo')
 
-    const h3 = document.createElement('h3')
-    h3.textContent = this.title
-    div.appendChild(h3)
+    const title = document.createElement('h3')
+    title.textContent = this.title
+    container.appendChild(title)
 
-    const p = document.createElement('p')
-    p.textContent = this.content
-    div.appendChild(p)
+    const content = document.createElement('p')
+    content.textContent = this.content
+    container.appendChild(content)
 
     const removeButton = document.createElement('button')
     removeButton.textContent = 'Delete'
     removeButton.classList.add('delete-button')
-    div.appendChild(removeButton)
+    container.appendChild(removeButton)
 
-    return div
+    if (this.deadline) {
+      const deadlineSpan = document.createElement('span')
+
+      const deadline = moment(this.deadline)
+      const numberOfDays = getNumberOfDays(deadline, moment())
+
+      deadlineSpan.textContent = `${deadline.format('D MMMM YYYY')} (${numberOfDays === 1 ? numberOfDays + ' day' : numberOfDays + ' days'})`
+      container.appendChild(deadlineSpan)
+    }
+
+    return container
   }
 }
