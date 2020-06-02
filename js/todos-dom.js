@@ -20,13 +20,17 @@ class TodosDOM {
 
     this.dom.appendChild(todoDOM)
     if (saveInStorage) this.storage.add(todo)
+
+    this.setPlaceholderDisplay()
   }
 
   remove(id) {
     this.storage.remove(id)
+
+    this.setPlaceholderDisplay()
   }
 
   setPlaceholderDisplay() {
-    this.placeholder.style.display = dom.childElementCount === 0 ? 'block' : 'none'
+    this.placeholder.style.display = this.dom.childElementCount === 0 ? 'block' : 'none'
   }
 }
