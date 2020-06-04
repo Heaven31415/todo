@@ -1,0 +1,23 @@
+@use 'variables' as v;
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .sticky-datetime {
+    display: none;
+  }
+
+  .new-todo-form {
+    margin: 0 0.5em;
+  }
+
+  .date-input {
+    flex-direction: column;
+  }
+
+  .todos-dom {
+    margin: 0 0.5em;
+  }
+}

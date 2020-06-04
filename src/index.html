@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A web programming classic - todo list!">
+  <meta name="author" content="Heaven31415">
+
+  <title>Things To Do</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="modal-box-background" class="modal-box-background">
+    <div class="modal-box-content">
+      <header>
+        <h3 id="modal-box-header">Modal Header</h3>
+      </header>
+      <p id="modal-box-body">Modal Body</p>
+      <button id="modal-box-button">Ok</button>
+    </div>
+  </div>
+  <h1 id="datetime" class="sticky-datetime">?</h1>
+  <header>
+    <h2>All your things to do are belong to us!</h2>
+  </header>
+  <main>
+    <form id="new-todo-form" class="new-todo-form" autocomplete="off">
+      <h3>Add a new thing to do:</h3>
+      <input type="text" name="title" placeholder="Short description of your todo.">
+      <textarea name="content" placeholder="Describe every little detail of your future task."></textarea>
+      <label class="checkbox-container">
+        Deadline
+        <input id="deadline-checkbox" type="checkbox" name="withDeadline">
+        <span class="checkmark"></span>
+      </label>
+      <div class="date-input">
+        <input id="day-input" type="number" name="day" placeholder="Day" disabled>
+        <input id="month-input" type="number" name="month" placeholder="Month" disabled>
+        <input id="year-input" type="number" name="year" placeholder="Year" disabled>
+      </div>
+      <button>Add</button>
+    </form>
+
+    <h2>What do you need to do?</h2>
+    <p id="placeholder">You don't have to do anything!</p>
+    <div id="todos-dom" class="todos-dom"></div>
+  </main>
+  <footer>2020 © All Rights Reserved. May we meet again!</footer>
+</body>
+</html>
