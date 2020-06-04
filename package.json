@@ -1,36 +1,28 @@
 {
-  "name": "static-site-boilerplate",
-  "description": "A modern boilerplate for static website development",
-  "version": "1.1.0",
-  "homepage": "http://staticsiteboilerplate.com",
+  "name": "things-to-do",
+  "description": "A simple todo list app written with HTML, Sass and JavaScript.",
+  "version": "1.0.0",
+  "homepage": "https://heaven31415.com",
   "author": {
-    "name": "Eric Alli",
-    "url": "http://ericalli.com"
+    "name": "heaven31415",
+    "url": "https://heaven31415.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericalli/static-site-boilerplate.git"
+    "url": "git+https://github.com/heaven31415/todo.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ericalli/static-site-boilerplate/issues"
+    "url": "https://github.com/heaven31415/todo/issues"
   },
   "keywords": [
-    "html5",
-    "css3",
-    "es6",
-    "frontend",
+    "html",
     "sass",
-    "less",
-    "static",
-    "boilerplate",
-    "webpack"
+    "javascript"
   ],
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
     "start:dist": "cross-env NODE_ENV=production webpack-dev-server --config ./config/webpack.config.js && http-server ./dist -o",
-    "setup": "node ./config/site.setup.js",
-    "postinstall": "node ./config/site.setup.js",
     "lint:js": "./node_modules/.bin/eslint \"src/**/*.js\"",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "build:dist": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
@@ -56,8 +48,6 @@
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.11.1",
     "image-webpack-loader": "^5.1.0",
-    "less": "^3.11.2",
-    "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
@@ -78,15 +68,8 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "clear": "^0.1.0",
-    "enquirer": "^2.3.5",
-    "figlet": "^1.4.0",
-    "jquery": "^3.5.1",
     "moment": "^2.26.0",
     "normalize.css": "^8.0.1",
-    "reset-css": "^4.0.1",
-    "sanitize.css": "^11.0.1",
     "ssh2-sftp-client": "^5.1.2",
     "webpack-dev-server": "^3.11.0"
   }

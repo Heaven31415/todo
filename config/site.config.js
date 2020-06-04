@@ -14,10 +14,10 @@ const config = {
   site_name: 'Things To Do',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'Description',
+  site_description: 'A simple todo list app written with HTML, Sass and JavaScript.',
 
   // Your website's URL, used for sitemap
-  site_url: '',
+  site_url: 'https://heaven31415.com',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
