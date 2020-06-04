@@ -3,15 +3,17 @@ import moment from 'moment';
 const getNumberOfDays = (a, b) => Math.max(Math.ceil(moment.duration(a.diff(b)).asDays()), 0);
 
 export default class Todo {
-  constructor(id, title, content, deadline) {
-    this.id = id;
+  constructor(title, content, deadline) {
+    this.id = moment().valueOf();
     this.title = title;
     this.content = content;
     this.deadline = deadline;
   }
 
   static fromData(data) {
-    return new Todo(data.id, data.title, data.content, data.deadline);
+    const todo = new Todo(data.title, data.content, data.deadline);
+    todo.id = data.id;
+    return todo;
   }
 
   generateDOM() {
