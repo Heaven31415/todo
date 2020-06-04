@@ -10,13 +10,14 @@ export default class Todo {
     this.deadline = deadline;
   }
 
-  static fromData(data) {
-    const todo = new Todo(data.title, data.content, data.deadline);
+  static fromJSON(data) {
+    const deadline = data.deadline ? moment(data.deadline) : undefined;
+    const todo = new Todo(data.title, data.content, deadline);
     todo.id = data.id;
     return todo;
   }
 
-  generateDOM() {
+  createDOM() {
     const container = document.createElement('div');
     container.classList.add('todo');
 
@@ -33,16 +34,23 @@ export default class Todo {
     removeButton.classList.add('delete-button');
     container.appendChild(removeButton);
 
+    const deadlineDiv = document.createElement('div');
+    deadlineDiv.classList.add('deadline');
+    container.appendChild(deadlineDiv);
+
     if (this.deadline) {
-      const deadlineSpan = document.createElement('span');
-
-      const deadline = moment(this.deadline);
-      const numberOfDays = getNumberOfDays(deadline, moment());
-
-      deadlineSpan.textContent = `${deadline.format('D MMMM YYYY')} (${numberOfDays === 1 ? `${numberOfDays} day` : `${numberOfDays} days`})`;
-      container.appendChild(deadlineSpan);
+      deadlineDiv.textContent = this.createDeadlineDivTextContent();
     }
 
     return container;
+  }
+
+  createDeadlineDivTextContent() {
+    const numberOfDays = getNumberOfDays(this.deadline, moment());
+
+    const deadlineText = this.deadline.format('D MMMM YYYY');
+    const numberOfDaysText = `${numberOfDays} day${numberOfDays !== 1 ? 's' : ''} left`;
+
+    return `${deadlineText} (${numberOfDaysText})`;
   }
 }

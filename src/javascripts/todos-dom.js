@@ -8,7 +8,7 @@ export default class TodosDOM {
   }
 
   add(todo, saveInStorage = true) {
-    const todoDOM = todo.generateDOM();
+    const todoDOM = todo.createDOM();
 
     const removeButton = todoDOM.querySelector('button');
     removeButton.addEventListener('click', () => {

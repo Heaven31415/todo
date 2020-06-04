@@ -44,9 +44,10 @@
     cursor: pointer;
   }
 
-  span {
+  .deadline {
     width: 100%;
-    padding: 5px;
+    height: 40px;
+    line-height: 40px;
     background-color: v.$black;
     color: v.$white;
   }

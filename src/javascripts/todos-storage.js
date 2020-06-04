@@ -7,7 +7,7 @@ export default class TodosStorage {
 
   load() {
     const todos = localStorage.getItem('todos');
-    this.todos = todos ? JSON.parse(todos).map((t) => Todo.fromData(t)) : [];
+    this.todos = todos ? JSON.parse(todos).map((t) => Todo.fromJSON(t)) : [];
   }
 
   save() {
