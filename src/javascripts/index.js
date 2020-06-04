@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
   const todosStorage = new TodosStorage();
   const todosDOM = new TodosDOM(todosStorage);
   const modalBox = new ModalBox();
-  const newTodoForm = new NewTodoForm(todosDOM, todosStorage, modalBox);
+  const newTodoForm = new NewTodoForm(todosDOM, todosStorage, modalBox, deadlineCheckbox);
 });
 
 /* eslint-enable no-unused-vars */

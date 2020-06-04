@@ -2,10 +2,11 @@ import moment from 'moment';
 import Todo from './todo';
 
 export default class NewTodoForm {
-  constructor(todosDOM, todosStorage, modalBox) {
+  constructor(todosDOM, todosStorage, modalBox, deadlineCheckbox) {
     this.todosDOM = todosDOM;
     this.todosStorage = todosStorage;
     this.modalBox = modalBox;
+    this.deadlineCheckbox = deadlineCheckbox;
     this.form = document.getElementById('new-todo-form');
 
     this.form.addEventListener('submit', (e) => this.onSubmit(e));
@@ -16,8 +17,8 @@ export default class NewTodoForm {
 
     const title = this.form.title.value;
     const content = this.form.content.value;
-    const withDeadline = this.form.withDeadline.checked;
 
+    const withDeadline = this.deadlineCheckbox.checked;
     const day = this.form.day.value;
     const month = this.form.month.value;
     const year = this.form.year.value;
@@ -60,8 +61,8 @@ export default class NewTodoForm {
   resetForm() {
     this.form.title.value = '';
     this.form.content.value = '';
-    this.form.withDeadline.checked = false;
 
+    this.deadlineCheckbox.checked = false;
     this.form.day.value = '';
     this.form.month.value = '';
     this.form.year.value = '';

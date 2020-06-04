@@ -8,11 +8,25 @@ export default class DeadlineCheckbox {
     this.checkbox.addEventListener('change', (e) => this.onChange(e));
   }
 
-  onChange(e) {
-    const disabled = !e.target.checked;
+  set checked(value) {
+    this.checkbox.checked = value;
 
-    this.dayInput.disabled = disabled;
-    this.monthInput.disabled = disabled;
-    this.yearInput.disabled = disabled;
+    this.dayInput.disabled = !value;
+    this.monthInput.disabled = !value;
+    this.yearInput.disabled = !value;
+
+    if (!value) {
+      this.dayInput.value = '';
+      this.monthInput.value = '';
+      this.yearInput.value = '';
+    }
+  }
+
+  get checked() {
+    return this.checkbox.checked;
+  }
+
+  onChange(e) {
+    this.checked = e.target.checked;
   }
 }
