@@ -2,6 +2,9 @@ const path = require('path');
 const Client = require('ssh2-sftp-client');
 
 const config = require('./site.config');
+const sftpConfig = JSON.parse(
+  fs.readFileSync(path.join(config.root, config.paths.config, 'sftp.json'), { encoding: 'utf-8' })
+)
 
 const client = new Client();
 
@@ -9,12 +12,12 @@ client.on('upload', info => {
   console.log(`Uploaded ${info.source}`);
 });
 
-client.connect(config.sftp)
+client.connect(sftpConfig)
 .then(() => {
-  return client.rmdir(config.sftp.remoteRoot, true);
+  return client.rmdir(sftpConfig.remoteRoot, true);
 })
 .then(() => {
-  return client.uploadDir(path.join(config.root, config.paths.dist), config.sftp.remoteRoot);
+  return client.uploadDir(path.join(config.root, config.paths.dist), sftpConfig.remoteRoot);
 })
 .then(() => {
   return client.end();

@@ -7,8 +7,6 @@ if (!ROOT) {
   ROOT = process.cwd();
 }
 
-const CONFIG_PATH = 'config'
-
 const config = {
   // Your website's name, used for favicon meta tags
   site_name: 'Things To Do',
@@ -38,18 +36,13 @@ const config = {
   env: process.env.NODE_ENV,
   root: ROOT,
   paths: {
-    config: CONFIG_PATH,
+    config: 'config',
     src: 'src',
     dist: 'dist',
   },
 
   package: JSON.parse(
     fs.readFileSync(path.join(ROOT, '/package.json'), { encoding: 'utf-8' }),
-  ),
-
-  // SFTP Configuration, edit sftp.json to change it
-  sftp: JSON.parse(
-    fs.readFileSync(path.join(ROOT, CONFIG_PATH, 'sftp.json'), { encoding: 'utf-8' })
   )
 };
 
