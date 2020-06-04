@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/heaven31415/todo.git"
   },
-  "license": "MIT",
+  "license": "Zlib",
   "bugs": {
     "url": "https://github.com/heaven31415/todo/issues"
   },
