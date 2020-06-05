@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.error-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  a {
+    width: 200px;
+    padding: 8px 0;
+    font-size: 1.2em;
+    color: v.$white;
+    background-color: v.$light-green;
+    border: 1px solid v.$black;
+    border-radius: 4px;
+    font-family: 'Muli', sans-serif;
+    transition: background-color 0.5s ease-in;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  a:hover {
+    background-color: v.$dark-green;
+    cursor: pointer;
+  }
+
+  a:focus {
+    border: 1px dotted v.$black;
+    outline: none;
+  }
+}
