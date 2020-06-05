@@ -3,7 +3,7 @@
 $background-color: rgba(0, 0, 0, 0.5);
 
 .modal-box-background {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -14,8 +14,8 @@ $background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   overflow: auto;
   background-color: $background-color;
-  animation-name: fade-in;
-  animation-duration: 1s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal-box-content {
