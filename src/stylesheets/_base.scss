@@ -71,19 +71,3 @@ footer {
   padding: 25px;
   margin-top: 20px;
 }
-
-.sticky-datetime {
-  width: 100%;
-  box-shadow: 0 2px 4px 2px v.$shadow-color;
-  background-color: v.$white;
-  color: v.$black;
-  margin: 0;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  opacity: 0;
-  animation-name: fade-in;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}

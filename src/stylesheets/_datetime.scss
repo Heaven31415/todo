@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+.datetime {
+  width: 100%;
+  box-shadow: 0 2px 4px 2px v.$shadow-color;
+  background-color: v.$white;
+  color: v.$black;
+  margin: 0;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 1s;
+}
