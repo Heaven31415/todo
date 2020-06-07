@@ -10,10 +10,11 @@ export default class Todo {
     this.deadline = deadline;
   }
 
-  static fromJSON(data) {
-    const deadline = data.deadline ? moment(data.deadline) : undefined;
-    const todo = new Todo(data.title, data.content, deadline);
-    todo.id = data.id;
+  static fromJSON({
+    id, title, content, deadline,
+  }) {
+    const todo = new Todo(title, content, deadline ? moment(deadline) : undefined);
+    todo.id = id;
     return todo;
   }
 
