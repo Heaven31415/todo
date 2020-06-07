@@ -24,11 +24,6 @@ export default class TodosStorage {
     this.save();
   }
 
-  clear() {
-    localStorage.removeItem('todos');
-    this.todos = [];
-  }
-
   get items() {
     return this.todos;
   }
