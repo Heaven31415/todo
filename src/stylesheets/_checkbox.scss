@@ -38,6 +38,7 @@
     opacity: 0;
   }
 
+  // Style .checkmark::after if it is placed after a checked checkbox
   input[type="checkbox"]:checked ~ .checkmark::after {
     opacity: 1;
   }
