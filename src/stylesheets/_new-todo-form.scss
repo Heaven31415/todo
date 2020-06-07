@@ -16,8 +16,7 @@
     border: 1px solid v.$black;
     border-radius: 4px;
     color: v.$black;
-    font-family: 'Muli', sans-serif;
-    font-size: 1em;
+    font: 1em v.$font-family;
     transition: background-color 0.5s ease-in;
   }
 
@@ -33,11 +32,10 @@
     padding: 8px;
     margin-bottom: 10px;
     resize: none;
-    font-size: 1em;
+    font: 1em v.$font-family;
     border: 1px solid v.$black;
     border-radius: 4px;
     color: v.$black;
-    font-family: 'Muli', sans-serif;
     transition: background-color 0.5s ease-in;
   }
 
@@ -60,12 +58,11 @@
   button {
     width: 200px;
     padding: 8px 0;
-    font-size: 1.2em;
+    font: 1.2em v.$font-family;
     color: v.$white;
     background-color: v.$light-green;
     border: 1px solid v.$black;
     border-radius: 4px;
-    font-family: 'Muli', sans-serif;
     transition: background-color 0.5s ease-in;
   }
 

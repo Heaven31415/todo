@@ -29,7 +29,7 @@ body {
   margin: 0;
   color: v.$black;
   background-image: url('../images/background.png'); /* Background pattern from Toptal Subtle Patterns */
-  font-family: 'Muli', sans-serif;
+  font-family: v.$font-family;
   text-align: center;
 }
 

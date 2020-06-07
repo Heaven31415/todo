@@ -9,12 +9,11 @@
   a {
     width: 200px;
     padding: 8px 0;
-    font-size: 1.2em;
+    font: 1.2em v.$font-family;
     color: v.$white;
     background-color: v.$light-green;
     border: 1px solid v.$black;
     border-radius: 4px;
-    font-family: 'Muli', sans-serif;
     transition: background-color 0.5s ease-in;
     text-decoration: none;
     margin-top: 20px;
