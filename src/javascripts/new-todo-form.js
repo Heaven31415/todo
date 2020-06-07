@@ -36,8 +36,26 @@ export default class NewTodoForm {
     }
 
     const day = this.form.day.value;
+
+    if (day <= 0) {
+      this.modalBox.show('Invalid day value', 'Value of day must be greater than 0.');
+      return;
+    }
+
     const month = this.form.month.value;
+
+    if (month <= 0) {
+      this.modalBox.show('Invalid month value', 'Value of month must be greater than 0.');
+      return;
+    }
+
     const year = this.form.year.value;
+
+    if (year <= 0) {
+      this.modalBox.show('Invalid year value', 'Value of year must be greater than 0.');
+      return;
+    }
+
     const deadline = moment(`${day}/${month}/${year}`, 'DD/MM/YYYY');
 
     if (!deadline.isValid()) {
