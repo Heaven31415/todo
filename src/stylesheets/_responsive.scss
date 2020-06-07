@@ -11,6 +11,12 @@
 
   .new-todo-form {
     margin: 0 0.5em;
+
+    .date-input {
+      & > * {
+        margin: 5px 0;
+      }
+    }
   }
 
   .date-input {
