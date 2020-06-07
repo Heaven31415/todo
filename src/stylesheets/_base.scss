@@ -34,7 +34,7 @@ body {
 }
 
 main {
-  flex: 1 0 auto;
+  flex: 1 0 auto; // Grow to always place footer at the bottom of the screen
   width: 100%;
 }
 
