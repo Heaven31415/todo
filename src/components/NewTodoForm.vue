@@ -148,7 +148,7 @@ form {
   background-color: #eee;
   border: 1px solid #333;
   border-radius: 4px;
-  padding: 0 3m 1em;
+  padding: 0 2em 1em;
 }
 
 input {
