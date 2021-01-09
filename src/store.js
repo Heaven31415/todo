@@ -19,7 +19,6 @@ export default {
       state.modalBox.isVisible = false;
     },
     addTodo(state, payload) {
-      console.log(payload.todo);
       state.todos.push(payload.todo);
     },
     removeTodo(state, payload) {
