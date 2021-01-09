@@ -72,7 +72,7 @@ export default {
 
       if (!this.withDeadline) {
         this.$store.commit("addTodo", {
-          todo: new Todo(this.title, this.content),
+          todo: new Todo(this.title, this.content, null),
         });
         this.resetForm();
         return;

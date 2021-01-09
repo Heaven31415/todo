@@ -8,6 +8,7 @@
       :id="todo.id"
       :title="todo.title"
       :content="todo.content"
+      :deadline="todo.deadline"
     ></todo>
   </div>
 </template>
