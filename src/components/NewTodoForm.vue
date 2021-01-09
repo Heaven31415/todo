@@ -158,7 +158,7 @@ input {
   border: 1px solid #333;
   border-radius: 4px;
   color: #333;
-  font: 1em "Muli", sans-serif;
+  font: 1em "Mulish", sans-serif;
   transition: background-color 0.5s ease-in;
 }
 
@@ -174,7 +174,7 @@ textarea {
   padding: 8px;
   margin-bottom: 10px;
   resize: none;
-  font: 1em "Muli", sans-serif;
+  font: 1em "Mulish", sans-serif;
   border: 1px solid #333;
   border-radius: 4px;
   color: #333;
@@ -190,7 +190,7 @@ textarea:focus {
 button {
   width: 200px;
   padding: 8px 0;
-  font: 1.2em "Muli";
+  font: 1.2em "Mulish", sans-serif;
   color: #eee;
   background-color: rgb(64, 190, 64);
   border: 1px solid #333;

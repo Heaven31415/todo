@@ -57,7 +57,7 @@ button {
   width: 40%;
   padding: 8px;
   margin: 10px;
-  font: 1.2em "Muli", sans-serif;
+  font: 1.2em "Mulish", sans-serif;
   color: #333;
   border: 1px solid #333;
   border-radius: 4px;

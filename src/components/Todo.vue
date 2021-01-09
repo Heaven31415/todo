@@ -43,7 +43,7 @@ p {
 }
 
 button {
-  font: 1.2em "Muli", sans-serif;
+  font: 1.2em "Mulish", sans-serif;
   width: 150px;
   margin: 5px 0 10px;
   padding: 5px;

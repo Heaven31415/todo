@@ -29,6 +29,8 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -57,8 +59,7 @@ body {
   height: 100vh;
   margin: 0;
   color: #333;
-  background-image: url('assets/background.png'); /* Background pattern from Toptal Subtle Patterns */
-  font-family: 'Muli', sans-serif;
+  font-family: "Mulish", sans-serif;
   text-align: center;
 }
 
