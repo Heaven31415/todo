@@ -12,19 +12,19 @@
 </template>
 
 <script>
-import DateTime from './components/DateTime.vue';
-import ModalBox from './components/ModalBox.vue';
-import NewTodoForm from './components/NewTodoForm.vue';
-import Todos from './components/Todos.vue';
+import DateTime from "./components/DateTime.vue";
+import ModalBox from "./components/ModalBox.vue";
+import NewTodoForm from "./components/NewTodoForm.vue";
+import Todos from "./components/Todos.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     DateTime,
     NewTodoForm,
     Todos,
-    ModalBox
-  }
+    ModalBox,
+  },
 };
 </script>
 
@@ -59,6 +59,7 @@ body {
   height: 100vh;
   margin: 0;
   color: #333;
+  background-image: url("assets/background.png"); /* Background pattern from Toptal Subtle Patterns */
   font-family: "Mulish", sans-serif;
   text-align: center;
 }

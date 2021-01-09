@@ -31,7 +31,7 @@ const store = createStore({
     },
     removeTodo(state, payload) {
       const index = state.todos.findIndex(t => t.id === payload.id);
-      
+
       if (index !== -1) {
         state.todos.splice(index, 1);
       }
