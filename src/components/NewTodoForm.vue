@@ -10,9 +10,9 @@
       placeholder="Describe every little detail of your future task."
       v-model="content"
     ></textarea>
-    <label for="deadline">Deadline</label>
     <input name="deadline" type="checkbox" v-model="withDeadline" />
-    <div>
+    <label for="deadline">Deadline</label>
+    <div class="date">
       <input
         type="number"
         placeholder="Day"
@@ -53,20 +53,34 @@ export default {
     };
   },
   methods: {
+    showModalBox(header, body) {
+      this.$store.commit("showModalBox", {
+        header,
+        body,
+      });
+    },
+    resetForm() {
+      this.title = "";
+      this.content = "";
+      this.withDeadline = false;
+      this.day = null;
+      this.month = null;
+      this.year = null;
+    },
     onSubmit() {
-      if (this.title.length === 0) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid title value",
-          body: "Title length must be greater than zero.",
-        });
+      if (this.title === "") {
+        this.showModalBox(
+          "Invalid title value",
+          "Title length must be greater than zero."
+        );
         return;
       }
 
-      if (this.content.length === 0) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid content value",
-          body: "Content length must be greater than zero.",
-        });
+      if (this.content === "") {
+        this.showModalBox(
+          "Invalid content value",
+          "Content length must be greater than zero."
+        );
         return;
       }
 
@@ -79,26 +93,26 @@ export default {
       }
 
       if (this.day <= 0) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid day value",
-          body: "Value of day must be greater than 0.",
-        });
+        this.showModalBox(
+          "Invalid day value",
+          "Value of day must be greater than 0."
+        );
         return;
       }
 
       if (this.month <= 0) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid month value",
-          body: "Value of month must be greater than 0.",
-        });
+        this.showModalBox(
+          "Invalid month value",
+          "Value of month must be greater than 0."
+        );
         return;
       }
 
       if (this.year <= 0) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid year value",
-          body: "Value of year must be greater than 0.",
-        });
+        this.showModalBox(
+          "Invalid year value",
+          "Value of year must be greater than 0."
+        );
         return;
       }
 
@@ -108,33 +122,26 @@ export default {
       );
 
       if (!deadline.isValid()) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid date format",
-          body: "Something is wrong with the format of the date you passed.",
-        });
+        this.showModalBox(
+          "Invalid date format",
+          "Something is wrong with the format of the date you passed."
+        );
         return;
       }
 
       if (!deadline.isAfter()) {
-        this.$store.commit("showModalBox", {
-          header: "Invalid date value",
-          body: "Your deadline should be set to tomorrow or later.",
-        });
+        this.showModalBox(
+          "Invalid date value",
+          "Your deadline should be set to tomorrow or later."
+        );
         return;
       }
 
       this.$store.commit("addTodo", {
         todo: new Todo(this.title, this.content, deadline),
       });
+
       this.resetForm();
-    },
-    resetForm() {
-      this.title = "";
-      this.content = "";
-      this.withDeadline = false;
-      this.day = null;
-      this.month = null;
-      this.year = null;
     },
   },
 };
@@ -151,18 +158,21 @@ form {
   padding: 0 2em 1em;
 }
 
-input {
+input[type="text"],
+input[type="number"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #333;
   border-radius: 4px;
   color: #333;
-  font: 1em "Mulish", sans-serif;
+  font-family: inherit;
+  font-size: 1em;
   transition: background-color 0.5s ease-in;
 }
 
-input:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
   outline: none;
   background-color: #333;
   color: #eee;
@@ -174,7 +184,8 @@ textarea {
   padding: 8px;
   margin-bottom: 10px;
   resize: none;
-  font: 1em "Mulish", sans-serif;
+  font-family: inherit;
+  font-size: 1em;
   border: 1px solid #333;
   border-radius: 4px;
   color: #333;
@@ -187,10 +198,21 @@ textarea:focus {
   color: #eee;
 }
 
+.date {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.date > * {
+  margin: 5px;
+}
+
 button {
   width: 200px;
   padding: 8px 0;
-  font: 1.2em "Mulish", sans-serif;
+  font-family: inherit;
+  font-size: 1.2em;
   color: #eee;
   background-color: rgb(64, 190, 64);
   border: 1px solid #333;
