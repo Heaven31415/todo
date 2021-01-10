@@ -8,10 +8,12 @@
     <new-todo-form></new-todo-form>
     <todos></todos>
   </main>
-  <footer>2021 © All Rights Reserved. May we meet again!</footer>
+  <footer>{{ currentYear }} © All Rights Reserved. May we meet again!</footer>
 </template>
 
 <script>
+import moment from "moment";
+
 import DateTime from "./components/DateTime.vue";
 import ModalBox from "./components/ModalBox.vue";
 import NewTodoForm from "./components/NewTodoForm.vue";
@@ -24,6 +26,11 @@ export default {
     NewTodoForm,
     Todos,
     ModalBox,
+  },
+  computed: {
+    currentYear() {
+      return moment().format("YYYY");
+    },
   },
 };
 </script>
