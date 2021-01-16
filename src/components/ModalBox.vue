@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-box-background" :style="style">
+  <div class="modal-box-background" :class="classes">
     <div class="modal-box-content">
       <header>
         <h3>{{ $store.getters.modalBox.header }}</h3>
@@ -13,11 +13,12 @@
 <script>
 export default {
   computed: {
-    style() {
+    classes() {
       return {
-        visibility: this.$store.getters.modalBox.isVisible
-          ? "visible"
-          : "hidden",
+        "fade-in": this.$store.getters.modalBox.isVisible,
+        "fade-out":
+          this.$store.getters.modalBox.header !== "" &&
+          !this.$store.getters.modalBox.isVisible,
       };
     },
   },
@@ -37,6 +38,8 @@ export default {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal-box-content {
