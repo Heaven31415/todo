@@ -144,6 +144,15 @@ export default {
       this.resetForm();
     },
   },
+  watch: {
+    withDeadline(value) {
+      if (!value) {
+        this.day = null;
+        this.month = null;
+        this.year = null;
+      }
+    },
+  },
 };
 </script>
 
