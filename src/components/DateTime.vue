@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ content }}</h1>
+  <h1 class="fade-in">{{ content }}</h1>
 </template>
 
 <script>
@@ -30,5 +30,8 @@ h1 {
   position: sticky;
   top: 0;
   z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  animation-delay: 1s;
 }
 </style>
