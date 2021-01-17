@@ -4,10 +4,10 @@ export default {
       modalBox: {
         isVisible: false,
         header: "",
-        body: ""
+        body: "",
       },
-      todos: []
-    }
+      todos: [],
+    };
   },
   mutations: {
     showModalBox(state, payload) {
@@ -22,12 +22,12 @@ export default {
       state.todos.push(payload.todo);
     },
     removeTodo(state, payload) {
-      const index = state.todos.findIndex(t => t.id === payload.id);
+      const index = state.todos.findIndex((t) => t.id === payload.id);
 
       if (index !== -1) {
         state.todos.splice(index, 1);
       }
-    }
+    },
   },
   getters: {
     modalBox(state) {
@@ -35,6 +35,6 @@ export default {
     },
     todos(state) {
       return state.todos;
-    }
-  }
-}
+    },
+  },
+};
