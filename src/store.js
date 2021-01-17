@@ -1,3 +1,5 @@
+import Todos from "./repositories/Todos.js";
+
 export default {
   state() {
     return {
@@ -6,7 +8,7 @@ export default {
         header: "",
         body: "",
       },
-      todos: [],
+      todos: new Todos(),
     };
   },
   mutations: {
@@ -19,14 +21,10 @@ export default {
       state.modalBox.isVisible = false;
     },
     addTodo(state, payload) {
-      state.todos.push(payload.todo);
+      state.todos.add(payload.todo);
     },
     removeTodo(state, payload) {
-      const index = state.todos.findIndex((t) => t.id === payload.id);
-
-      if (index !== -1) {
-        state.todos.splice(index, 1);
-      }
+      state.todos.remove(payload.id);
     },
   },
   getters: {
@@ -34,7 +32,7 @@ export default {
       return state.modalBox;
     },
     todos(state) {
-      return state.todos;
+      return state.todos.todos;
     },
   },
 };
