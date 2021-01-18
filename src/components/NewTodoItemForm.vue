@@ -39,7 +39,7 @@
 <script>
 import moment from "moment";
 
-import Todo from "../models/Todo.js";
+import TodoItem from "../models/TodoItem.js";
 
 export default {
   data() {
@@ -85,8 +85,8 @@ export default {
       }
 
       if (!this.withDeadline) {
-        this.$store.commit("addTodo", {
-          todo: new Todo(this.title, this.content, null),
+        this.$store.commit("addTodoItem", {
+          todoItem: new TodoItem(this.title, this.content, null),
         });
         this.resetForm();
         return;
@@ -137,8 +137,8 @@ export default {
         return;
       }
 
-      this.$store.commit("addTodo", {
-        todo: new Todo(this.title, this.content, deadline),
+      this.$store.commit("addTodoItem", {
+        todoItem: new TodoItem(this.title, this.content, deadline),
       });
 
       this.resetForm();

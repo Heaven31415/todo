@@ -1,18 +1,18 @@
 import { createWebHistory } from "vue-router";
 
-import Error from "./components/views/Error.vue";
-import Main from "./components/views/Main.vue";
+import ErrorView from "./components/views/ErrorView.vue";
+import MainView from "./components/views/MainView.vue";
 
 export default {
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      component: Main,
+      component: MainView,
     },
     {
       path: "/:catchAll(.*)",
-      component: Error,
+      component: ErrorView,
     },
   ],
 };

@@ -1,6 +1,6 @@
 import moment from "moment";
 
-export default class Todo {
+export default class TodoItem {
   constructor(title, content, deadline) {
     this.id = moment().valueOf();
     this.title = title;

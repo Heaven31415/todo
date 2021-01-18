@@ -1,4 +1,4 @@
-import Todos from "./repositories/Todos.js";
+import TodoItems from "./repositories/TodoItems.js";
 
 export default {
   state() {
@@ -8,7 +8,7 @@ export default {
         header: "",
         body: "",
       },
-      todos: new Todos(),
+      todoItems: new TodoItems(),
     };
   },
   mutations: {
@@ -20,19 +20,19 @@ export default {
     hideModalBox(state) {
       state.modalBox.isVisible = false;
     },
-    addTodo(state, payload) {
-      state.todos.add(payload.todo);
+    addTodoItem(state, payload) {
+      state.todoItems.add(payload.todoItem);
     },
-    removeTodo(state, payload) {
-      state.todos.remove(payload.id);
+    removeTodoItem(state, payload) {
+      state.todoItems.remove(payload.id);
     },
   },
   getters: {
     modalBox(state) {
       return state.modalBox;
     },
-    todos(state) {
-      return state.todos.todos;
+    todoItems(state) {
+      return state.todoItems.todoItems;
     },
   },
 };

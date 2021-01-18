@@ -1,8 +1,8 @@
 <template>
-  <div class="todo">
+  <div class="todo-item">
     <h3>{{ title }}</h3>
     <p>{{ content }}</p>
-    <button @click="$store.commit('removeTodo', { id })">Delete</button>
+    <button @click="$store.commit('removeTodoItem', { id })">Delete</button>
     <div class="deadline" v-if="deadline">{{ deadlineText }}</div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-.todo {
+.todo-item {
   flex: 0 1 500px;
   display: flex;
   flex-direction: column;
