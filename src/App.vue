@@ -1,13 +1,7 @@
 <template>
   <modal-box></modal-box>
   <date-time></date-time>
-  <header>
-    <h2>All your things to do are belong to us!</h2>
-  </header>
-  <main>
-    <new-todo-form></new-todo-form>
-    <todos></todos>
-  </main>
+  <router-view></router-view>
   <footer>{{ currentYear }} © All Rights Reserved. May we meet again!</footer>
 </template>
 
@@ -16,15 +10,11 @@ import moment from "moment";
 
 import DateTime from "./components/DateTime.vue";
 import ModalBox from "./components/ModalBox.vue";
-import NewTodoForm from "./components/NewTodoForm.vue";
-import Todos from "./components/Todos.vue";
 
 export default {
   name: "App",
   components: {
     DateTime,
-    NewTodoForm,
-    Todos,
     ModalBox,
   },
   computed: {
@@ -59,16 +49,20 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-body {
+#app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   height: 100vh;
-  margin: 0;
   color: #333;
-  background-image: url("assets/background.png"); /* Background pattern from Toptal Subtle Patterns */
   font-family: "Mulish", sans-serif;
   text-align: center;
+}
+
+body {
+  background-image: url("assets/background.png"); /* Background pattern from Toptal Subtle Patterns */
+  margin: 0;
 }
 
 main {
@@ -111,10 +105,6 @@ footer {
   font-size: 1.3em;
   padding: 20px;
   margin-top: 20px;
-}
-
-#app {
-  width: 100%;
 }
 
 @keyframes fade-in {
